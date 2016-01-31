@@ -1,0 +1,5 @@
+#!/bin/bash 
+#Author:Zhangtao 
+#Date & Time: 2016-01-30-23:34:59
+#Description:Verify email
+gawk --re-interval '/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/{print $0}'

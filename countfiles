@@ -1,0 +1,18 @@
+#!/bin/bash
+#Author:Zhangtao
+#Date & Time: 2016-01-30-23:06:19
+#Description:count files in $PATH
+count=0
+total=0
+paths=`echo $PATH | sed 's/:/ /g'`
+for dir in $paths
+do
+    for file in `ls $dir`
+    do
+        count=$[ $count + 1 ]
+    done
+    echo $dir "--" $count
+    total=$[ $count + $total ]
+    count=0
+done
+echo "Total --" $total

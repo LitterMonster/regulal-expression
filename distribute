@@ -1,0 +1,9 @@
+#!/bin/bash
+#Author:Zhangtao
+#Date & Time: 2016-01-30-21:59:44
+#Description:write some messages to a?
+for file in $(ls . | grep ^a)
+do
+    sed '/file/d' $file > $file
+    echo "This file called $file second" >> $file
+done
